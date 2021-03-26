@@ -60,9 +60,11 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         observeAuthenticationState()
 
+        //TODO 1.1
         binding.authButton.setOnClickListener { launchSignInFlow() }
     }
 
+    //TODO 1.3
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == SIGN_IN_RESULT_CODE) {
@@ -123,6 +125,7 @@ class MainFragment : Fragment() {
         )
     }
 
+    //TODO 1.2
     private fun launchSignInFlow() {
         // Give users the option to sign in / register with their email
         // If users choose to register with their email,
