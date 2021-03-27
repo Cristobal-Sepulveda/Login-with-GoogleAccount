@@ -62,6 +62,12 @@ class MainFragment : Fragment() {
 
         //TODO 1.1
         binding.authButton.setOnClickListener { launchSignInFlow() }
+
+        //TODO 3.3
+        binding.settingsBtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToSettingsFragment()
+            findNavController().navigate(action)
+        }
     }
 
     //TODO 1.3
