@@ -84,6 +84,7 @@ class MainFragment : Fragment() {
         }
     }
 
+    //TODO 2.3
     /**
      * Observes the authentication state and changes the UI accordingly.
      * If there is a logged in user: (1) show a logout button and (2) display their name.
@@ -98,11 +99,13 @@ class MainFragment : Fragment() {
                     binding.welcomeText.text = getFactWithPersonalization(factToDisplay)
 
                     binding.authButton.text = getString(R.string.logout_button_text)
+                    //TODO 2.6
                     binding.authButton.setOnClickListener {
                         AuthUI.getInstance().signOut(requireContext())
                     }
                 }
                 else -> {
+                    //TODO 2.5
                     binding.welcomeText.text = factToDisplay
 
                     binding.authButton.text = getString(R.string.login_button_text)
@@ -114,7 +117,7 @@ class MainFragment : Fragment() {
         })
     }
 
-
+    //TODO 2.4
     private fun getFactWithPersonalization(fact: String): String {
         return String.format(
             resources.getString(
